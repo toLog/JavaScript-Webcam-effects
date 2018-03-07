@@ -54,12 +54,9 @@ function paintToCanvas(effect) {
   canvas.height = height;
 
   function paintWithEffect() {
-    //ctx1.fillStyle = 'red';
-    //ctx1.fillRect(25, 25, 200, 200);
     ctx.drawImage(video, 0, 0, width, height);
     let pixels = ctx.getImageData(0, 0, width, height);
     pixels = effect(pixels);
-    
     ctx.putImageData(pixels, 0, 0);
   }
 
@@ -171,8 +168,7 @@ function getRgbSliderValues() {
 function getSplitSliderValue() {
 
   split = Number(splitSlider.value);
-  //console.log(split)
-
+  
 }
 
 function getGreenscreenSliderValues() {
