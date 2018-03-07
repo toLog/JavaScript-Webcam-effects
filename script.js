@@ -1,5 +1,3 @@
-fuck--++:
-
 const video = document.querySelector('.player');
 const canvas = document.querySelector('.photo');
 //const canvas1 = document.querySelector('.bottomLayer');
