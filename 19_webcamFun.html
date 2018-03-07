@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Get User Media Code Along!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="photobooth">
+    <div class="controls">
+      <button onClick="takePhoto()">Take Photo</button>
+      <select class="pickeffect">
+        <option value="rgbchange">RGB Alter</option>
+        <option value="rgbsplit">RGB Split</option>
+        <option value="greenscreen">Green Screen</option>
+      </select>
+      <div class="sliders">
+        <div class="greenscreen slidertype" data-func="greenscreen">
+          <label for="rmin">Red Min:</label>
+          <input type="range" value="0" min=0 max=255 name="rmin">
+          <label for="rmax">Red Max:</label>
+          <input type="range" value="255" min=0 max=255 step="5" name="rmax">
+          <br>
+          <label for="gmin">Green Min:</label>
+          <input type="range" value="0" min=0 max=255 step="5" name="gmin">
+          <label for="gmax">Green Max:</label>
+          <input type="range" value="255" min=0 max=255 step="5" name="gmax">
+          <br>
+          <label for="bmin">Blue Min:</label>
+          <input type="range" value="0" min=0 max=255 step="5" name="bmin">
+          <label for="bmax">Blue Max:</label>
+          <input type="range" value="255" min=0 max=255 step="5" name="bmax">
+        </div>
+        <div class="rgbchange slidertype" data-func="rgbChange">
+          <label for="rlevel">Red Level:</label>
+          <input type="range" min=0 max=255 step="5" name="rlevel">
+          <br>
+          <label for="glevel">Green Level:</label>
+          <input type="range" min=0 max=255 step="5" name="glevel">
+          <br>
+          <label for="blevel">Blue Level:</label>
+          <input type="range" min=0 max=255 step="5" name="blevel">
+        </div>
+        <div class="rgbsplit slidertype" data-func="rgbSplit">
+          <label for="split">Split:</label>
+          <input type="range" value="0" min=0 max=128 step="1" name="split">
+        </div>
+      </div>
+    </div>
+    <div class="canvases" style="position: relative;">
+      <div class="bottomLayer"></div>
+      <canvas class="photo"></canvas>
+    </div>
+    <video class="player vsc initialized"></video>
+    <div class="strip"></div>
+  </div>
+
+  <!-- <audio class="snap" src="http://wesbos.com/demos/photobooth/snap.mp3" ></audio> -->
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
