@@ -28,14 +28,9 @@ let greenscreenLevels = {
   bmax: 255
 }
 
-
-
-
 let split = 0;
 
 let currentEffect = rgbChange;
-
-
 
 function getVideo() {
   navigator.mediaDevices.getUserMedia({ video: true, audio: false })
