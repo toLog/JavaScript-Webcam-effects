@@ -15,6 +15,7 @@ const effectDropdown = document.querySelector('.pickeffect');
 
 let intervalID = null;
 
+//change to object
 let rAdd = 128;
 let gAdd = 128;
 let bAdd = 128;
